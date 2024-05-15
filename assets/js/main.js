@@ -451,20 +451,76 @@ window.addEventListener('load', function() {
 
 /********/
 
-document.querySelectorAll('.more-info-button').forEach(function(button) {
-	button.addEventListener('click', function() {
-		var project = this.parentElement;
-		var expandedInfo = project.querySelector('.expanded-info');
-		expandedInfo.style.display = 'block';
-		project.style.width = '100%';
-	});
-});
+// document.querySelectorAll('.more-info-button').forEach(function(button) {
+// 	button.addEventListener('click', function() {
+// 		var project = this.parentElement;
+// 		var expandedInfo = project.querySelector('.expanded-info');
+// 		expandedInfo.style.display = 'block';
+// 		project.style.width = '100%';
+// 	});
+// });
 
-document.querySelectorAll('.less-info-button').forEach(function(button) {
-	button.addEventListener('click', function() {
-		var project = this.parentElement.parentElement;
-		var expandedInfo = this.parentElement;
-		expandedInfo.style.display = 'none';
-		project.style.width = 'auto';
-	});
-});
+// document.querySelectorAll('.less-info-button').forEach(function(button) {
+// 	button.addEventListener('click', function() {
+// 		var project = this.parentElement.parentElement;
+// 		var expandedInfo = this.parentElement;
+// 		expandedInfo.style.display = 'none';
+// 		project.style.width = 'auto';
+// 	});
+// });
+
+function expandirColumna(index) {
+    const columnas = document.querySelectorAll('.columna');
+    const boton = columnas[index].querySelector('.boton-mas');
+    const textoOriginal = columnas[index].querySelector('.brief-text');
+    const textoExpandido = columnas[index].querySelector('.alt-text');
+    const verPdfLink = columnas[index].querySelector('.ver-pdf');
+
+    if (boton.textContent === 'Mostrar más') {
+        columnas[index].classList.add('expandido'); // Aplicar la clase de expansión
+        boton.textContent = 'Mostrar menos'; // Cambiar el texto del botón a "Menos"
+        columnas[(index+1)%2].classList.add('oculto'); // Ocultar la segunda columna
+        textoOriginal.style.display = 'none';
+        textoExpandido.style.display = 'block';
+        verPdfLink.style.display = 'block'; // Mostrar el enlace "Ver PDF"
+    } else {
+        columnas[index].classList.remove('expandido'); // Remover la clase de expansión
+        boton.textContent = 'Mostrar más'; // Cambiar el texto del botón a "Más"
+        columnas[(index+1)%2].classList.remove('oculto'); // Mostrar la segunda columna
+        textoOriginal.style.display = 'block';
+        textoExpandido.style.display = 'none';
+        verPdfLink.style.display = 'none'; // Ocultar el enlace "Ver PDF"
+    }
+
+    // const otraColumnaIndex = index === 0 ? 1 : 0;
+    // columnas[otraColumnaIndex].classList.remove('expandido'); // Asegurar que la otra columna esté contraída
+}
+
+// function expandirColumna(index) {
+//     const columnas = document.querySelectorAll('.columna');
+//     const boton = columnas[index].querySelector('.boton-mas');
+//     const verPdfLink = columnas[index].querySelector('.ver-pdf');
+
+//     if (boton.textContent === 'Más') {
+//         // Expande la columna
+//         columnas.forEach((columna, i) => {
+//             if (i === index) {
+//                 columna.classList.add('expandido');
+//             } else {
+//                 columna.classList.remove('expandido');
+//             }
+//         });
+//         // Cambia el texto del botón
+//         boton.textContent = 'Menos';
+//         // Muestra el enlace "Ver PDF"
+//         verPdfLink.style.display = 'inline'; // Mostrar como un enlace
+//     } else {
+//         // Contrae la columna
+//         columnas[index].classList.remove('expandido');
+//         // Restaura el texto del botón
+//         boton.textContent = 'Más';
+//         // Oculta el enlace "Ver PDF"
+//         verPdfLink.style.display = 'none';
+//     }
+// }
+
