@@ -1720,7 +1720,7 @@ input, select, textarea {
 .tech {
 	color: rgba(181, 177, 206, 0.637);
     margin-bottom: 10px; /* Ajustar el margen inferior del texto */
-	font-size: 16px;
+	font-size: 2vw;
 }
 
 .alt-text{
