@@ -9,7 +9,6 @@ window.addEventListener('load', function() {
 	var imageUrls = [
 		'../../images/overlay.png',
 		'../../images/cies.jpg',
-		'../../images/bg.jpg',
 		'../../images/cies_dark.jpg'
 	];
 
@@ -423,17 +422,49 @@ window.addEventListener('load', function() {
 
 })(jQuery);
 
-function preloadImages(urls) {
-	urls.forEach(url => {
-		const img = new Image();
-		img.src = url;
-	});
-}
 
-window.addEventListener('load', function() {
-	preloadImages([
-		'../../images/overlay.png',
-		'../../images/cies.jpg'
-	]);
-	// Your other JavaScript code here
+
+
+
+/* function toggleProjectDetails(button) {
+    var project = button.closest('.project');
+
+    // Toggle expanded state
+    project.classList.toggle('expanded');
+
+    var projectContent = project.querySelector('.project-content');
+    var projectDetails = project.querySelector('.project-details');
+    var showMoreButton = project.querySelector('.show-more-button');
+
+    if (project.classList.contains('expanded')) {
+        // Expand project details
+        projectContent.style.display = 'none';
+        projectDetails.style.display = 'block';
+        showMoreButton.textContent = 'Show Less';
+    } else {
+        // Collapse project details
+        projectContent.style.display = 'flex';
+        projectDetails.style.display = 'none';
+        showMoreButton.textContent = 'Show More';
+    }
+} */
+
+/********/
+
+document.querySelectorAll('.more-info-button').forEach(function(button) {
+	button.addEventListener('click', function() {
+		var project = this.parentElement;
+		var expandedInfo = project.querySelector('.expanded-info');
+		expandedInfo.style.display = 'block';
+		project.style.width = '100%';
+	});
+});
+
+document.querySelectorAll('.less-info-button').forEach(function(button) {
+	button.addEventListener('click', function() {
+		var project = this.parentElement.parentElement;
+		var expandedInfo = this.parentElement;
+		expandedInfo.style.display = 'none';
+		project.style.width = 'auto';
+	});
 });

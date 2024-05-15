@@ -1111,7 +1111,7 @@ input, select, textarea {
 		-webkit-transform: scale(1.0);
 		-ms-transform: scale(1.0);
 		transform: scale(1.0);
-		-webkit-backface-visibility: hidden;
+		/* -webkit-backface-visibility: hidden; */
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -1158,7 +1158,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/cies.jpg");
+			background-image: url("../../images/bg.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1659,3 +1659,49 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+
+
+
+
+/* Aaaa */
+
+
+
+
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+.project-content,
+.project-details {
+    flex: 1;
+    display: none;
+}
+
+.project.expanded .project-content,
+.project.expanded .project-details {
+    display: block;
+}
+
+.project-details {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.show-more-button {
+    margin-top: 10px;
+}
+
+
+
+
+/*******/
