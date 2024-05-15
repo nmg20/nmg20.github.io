@@ -4,6 +4,29 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+window.addEventListener('load', function() {
+	// Array of image URLs to preload
+	var imageUrls = [
+		'../../images/overlay.png',
+		'../../images/cies.jpg',
+		'../../images/bg.jpg',
+		'../../images/cies_dark.jpg'
+	];
+
+	// Function to preload images
+	function preloadImages(urls) {
+		urls.forEach(function(url) {
+			var img = new Image();
+			img.src = url;
+		});
+	}
+
+	// Preload images
+	preloadImages(imageUrls);
+
+	// Your other JavaScript code here
+});
+
 (function($) {
 
 	var	$window = $(window),
