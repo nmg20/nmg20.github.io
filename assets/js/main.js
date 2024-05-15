@@ -399,3 +399,18 @@
 					});
 
 })(jQuery);
+
+function preloadImages(urls) {
+	urls.forEach(url => {
+		const img = new Image();
+		img.src = url;
+	});
+}
+
+window.addEventListener('load', function() {
+	preloadImages([
+		'../../images/overlay.png',
+		'../../images/cies.jpg'
+	]);
+	// Your other JavaScript code here
+});
