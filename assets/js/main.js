@@ -469,12 +469,12 @@ window.addEventListener('load', function() {
 // 	});
 // });
 
-function expandirColumna(index) {
+/* function expandirColumna(index) {
     const columnas = document.querySelectorAll('.columna');
     const boton = columnas[index].querySelector('.boton-mas');
     const textoOriginal = columnas[index].querySelector('.brief-text');
     const textoExpandido = columnas[index].querySelector('.alt-text');
-    const verPdfLink = columnas[index].querySelector('.ver-pdf');
+    const verPdfLink = columnas[index].querySelector('.link-button');
 
     if (boton.textContent === 'Mostrar más') {
         columnas[index].classList.add('expandido'); // Aplicar la clase de expansión
@@ -494,12 +494,12 @@ function expandirColumna(index) {
 
     // const otraColumnaIndex = index === 0 ? 1 : 0;
     // columnas[otraColumnaIndex].classList.remove('expandido'); // Asegurar que la otra columna esté contraída
-}
+} */
 
 // function expandirColumna(index) {
 //     const columnas = document.querySelectorAll('.columna');
 //     const boton = columnas[index].querySelector('.boton-mas');
-//     const verPdfLink = columnas[index].querySelector('.ver-pdf');
+//     const verPdfLink = columnas[index].querySelector('.link-button');
 
 //     if (boton.textContent === 'Más') {
 //         // Expande la columna
@@ -524,3 +524,32 @@ function expandirColumna(index) {
 //     }
 // }
 
+function expandirColumna(boton) {
+    const columna = boton.closest('.columna');
+    const columnasContainer = columna.closest('.container');
+    const columnas = columnasContainer.querySelectorAll('.columna');
+    const index = Array.from(columnas).indexOf(columna);
+    const otraColumnaIndex = (index + 1) % 2;
+
+    const toggleExpandido = () => {
+        columna.classList.toggle('expandido');
+        boton.textContent = columna.classList.contains('expandido') ? 'Mostrar menos' : 'Mostrar más';
+    };
+
+    const toggleOculto = () => {
+        columnas[otraColumnaIndex].classList.toggle('oculto');
+    };
+
+    const toggleTextos = () => {
+        const textoOriginal = columna.querySelector('.brief-text');
+        const textoExpandido = columna.querySelector('.alt-text');
+        const verPdfLink = columna.querySelector('.link-button');
+        textoOriginal.style.display = columna.classList.contains('expandido') ? 'none' : 'block';
+        textoExpandido.style.display = columna.classList.contains('expandido') ? 'block' : 'none';
+        verPdfLink.style.display = columna.classList.contains('expandido') ? 'block' : 'none';
+    };
+
+    toggleExpandido();
+    toggleOculto();
+    toggleTextos();
+}

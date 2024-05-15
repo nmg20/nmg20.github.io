@@ -1697,44 +1697,88 @@ input, select, textarea {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.show-more-button {
-    margin-top: 10px;
-}
 
 
 
-
-/*******/
-
-
-
-.columna {
-	position: relative; /* Posición relativa para permitir el posicionamiento absoluto de la columna expandida */
-	flex: 1;
-    background-color: rgba(255, 255, 255, 0.15); /* Fondo blanco semitransparente */
-    margin: 0 10px; /* Margen horizontal entre columnas */
-    padding: 20px; /* Espacio interno dentro de cada columna */
-	transition: flex 0.5s ease; /* Transición suave para el cambio de tamaño */
-}
 
 .container {
     display: flex;
 	flex-direction: row;
     justify-content: space-between; /* Distribuir las columnas de manera uniforme */
+	flex-wrap: wrap;
 }
 
-.columna:nth-child(odd) {
-    background-color: #f0f0f01c;
+
+
+/*********** TEXTO ************/
+
+.brief-text {
+    margin-bottom: 10px; /* Ajustar el margen inferior del texto */
+	font-size: 20px;
 }
 
-.columna:nth-child(even) {
-    background-color: #f0f0f01c;
+.tech {
+	color: rgba(181, 177, 206, 0.637);
+    margin-bottom: 10px; /* Ajustar el margen inferior del texto */
+	font-size: 16px;
 }
+
+.alt-text{
+	font-size: 18px;
+	margin-bottom: 10px; /* Ajustar el margen inferior del texto */
+	transition: flex 0.5s ease; /* Transición suave para el cambio de tamaño */
+}
+
+.cardTitle {
+	font-size: 2vw;
+	/* max-width: 100%; */
+	/* white-space: nowrap; */
+	/* overflow: hidden; */
+	/* text-overflow: ellipsis; */
+}
+
+.article.aboutMe {
+	font-size: 18px;
+	margin-left: 20px;
+	padding-left: 20px;
+}
+
+
+/************** BOTÓN ***************/
+
+.link-button {
+	background-color: rgba(179, 176, 176, 0.185); /* Color del botón */
+    border: none;
+	font-size: 20px;
+    display: block;
+    text-align: center; /* Centrar el texto */
+	transition: transform 0.3s ease;
+}
+
+.link-button:hover {
+	background-color: rgba(240, 240, 240, 0.185);
+    transform: scale(1.05); /* Expande la imagen al hacer hover */
+}
+
+.link-button {
+	background-color: rgba(240, 240, 240, 0.185); /* Color del botón */
+    border: none;
+	font-size: 20px;
+    display: block;
+    text-align: center; /* Centrar el texto */
+}
+
+.show-more-button {
+    margin-top: 10px;
+}
+
+
+/*** Mostrar Más ***/
 
 .boton-mas {
     background-color: rgba(240, 240, 240, 0.048); /* Color del botón */
     border: none;
-    color: #000000; /* Color del texto del botón */
+    color: rgba(240, 240, 240, 0.048); /* Color del texto del botón */
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -1750,9 +1794,24 @@ input, select, textarea {
     background-color: rgba(240, 240, 240, 0.6); /* Color del botón al pasar el mouse */
 }
 
-/* Agregar estilos para la expansión de la columna */
+/********** COLUMNA ************/
+
+.columna {
+	position: relative; /* Posición relativa para permitir el posicionamiento absoluto de la columna expandida */
+	flex: 1;
+    background-color: rgba(255, 255, 255, 0.24); /* Fondo blanco semitransparente */
+    margin: 0 10px; /* Margen horizontal entre columnas */
+    padding: 20px; /* Espacio interno dentro de cada columna */
+	transition: flex 0.5s ease; /* Transición suave para el cambio de tamaño */
+	box-sizing: border-box;	
+}
+
+.row .columna:last-child {
+    margin-right: 0;
+}
+
 .expandido {
-    flex: 3; Expandir la columna
+    flex: 3; /*Expandir la columna*/
     z-index: 1; /* Colocar la columna expandida sobre la otra */
     flex-grow: 100%; /* La columna expandida ocupa todo el espacio disponible */
 }
@@ -1761,28 +1820,43 @@ input, select, textarea {
     visibility: hidden; /* Ocultar la columna */
 }
 
-.columna img {
-    max-width: 50%; /* La imagen ocupará el 100% del ancho disponible */
-    height: auto; /* Altura automática para mantener la proporción de la imagen */
+.columna:nth-child(odd) {
+    background-color: #f0f0f01c;
 }
 
-.brief-text {
-    margin-bottom: 10px; /* Ajustar el margen inferior del texto */
-	font-size: 20px;
+.columna:nth-child(even) {
+    background-color: #f0f0f01c;
 }
 
-.tech {
-    margin-bottom: 10px; /* Ajustar el margen inferior del texto */
-	font-size: 16px;
+/*************** IMÁGENES *******************/
+
+.columna .cardImg {
+	filter: grayscale(100%) blur(1px);
+    width: 100%; /* Establece el ancho máximo */
+    height: 150%; /* Altura automática para mantener la proporción */
+    max-height: 200px; /* Establece la altura máxima */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+	transition: filter 0.3s ease; /* Añade una transición suave */
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
 
-.alt-text{
-	font-size: 18px;
-	margin-bottom: 10px; /* Ajustar el margen inferior del texto */
-	transition: flex 0.5s ease; /* Transición suave para el cambio de tamaño */
+.columna .cardImg:hover{
+	filter: grayscale(0%) blur(0);
 }
 
-.ver-pdf {
-    display: block;
-    text-align: center; /* Centrar el texto */
+.major .introPic {
+	width: 100%; /* Establece el ancho máximo */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-width: 600px;
+	display: block;
+	transition: transform 0.6s ease; /* Añade una transición suave */
+	/* padding-left: 20px;*/
+	/* padding-right: 20px; */
+	margin: 0 auto;
 }
+
+.introPic:hover {
+    transform: scale(1.1); /* Expande la imagen al hacer hover */
+}
+
