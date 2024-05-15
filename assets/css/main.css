@@ -1707,16 +1707,81 @@ input, select, textarea {
 /*******/
 
 
-.row {
-	display: flex;
-  }
-  
-  .column {
-	flex: 50%;
-  }
 
-  @media screen and (max-width: 600px) {
-	.column {
-	  width: 100%;
-	}
-  }
+.columna {
+	position: relative; /* Posición relativa para permitir el posicionamiento absoluto de la columna expandida */
+	flex: 1;
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo blanco semitransparente */
+    margin: 0 10px; /* Margen horizontal entre columnas */
+    padding: 20px; /* Espacio interno dentro de cada columna */
+	transition: flex 0.5s ease; /* Transición suave para el cambio de tamaño */
+}
+
+.container {
+    display: flex;
+	flex-direction: row;
+    justify-content: space-between; /* Distribuir las columnas de manera uniforme */
+}
+
+.columna:nth-child(odd) {
+    background-color: #f0f0f01c;
+}
+
+.columna:nth-child(even) {
+    background-color: #f0f0f01c;
+}
+
+.boton-mas {
+    background-color: rgba(240, 240, 240, 0.048); /* Color del botón */
+    border: none;
+    color: #000000; /* Color del texto del botón */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.boton-mas:hover {
+    background-color: rgba(240, 240, 240, 0.6); /* Color del botón al pasar el mouse */
+}
+
+/* Agregar estilos para la expansión de la columna */
+.expandido {
+    flex: 3; Expandir la columna
+    z-index: 1; /* Colocar la columna expandida sobre la otra */
+    flex-grow: 100%; /* La columna expandida ocupa todo el espacio disponible */
+}
+
+.oculto {
+    visibility: hidden; /* Ocultar la columna */
+}
+
+.columna img {
+    max-width: 50%; /* La imagen ocupará el 100% del ancho disponible */
+    height: auto; /* Altura automática para mantener la proporción de la imagen */
+}
+
+.brief-text {
+    margin-bottom: 10px; /* Ajustar el margen inferior del texto */
+	font-size: 20px;
+}
+
+.tech {
+    margin-bottom: 10px; /* Ajustar el margen inferior del texto */
+	font-size: 16px;
+}
+
+.alt-text{
+	font-size: 18px;
+	margin-bottom: 10px; /* Ajustar el margen inferior del texto */
+}
+
+.ver-pdf {
+    display: block;
+    text-align: center; /* Centrar el texto */
+}
