@@ -67,35 +67,77 @@
 
 			<!-- Portfolio -->
 			<article id="portfolio">
-				<h1 class="major">Portfolio</h1>
+				<h1 class="major">Proyectos</h1>
 				<br>
-				<h2 class="major rHeader">Top Projects</h2>
+				<h2 class="major rHeader">Estudios</h2>
 				<container>
 					<div class="row">
-						<div class="topColumn">
-							<div class="outline">
-								<h3 class="cardTitle">Identificador de Matrículas</h3>
+						<div class="container">
+							<div class="columna">
 								<img class="cardImg" src="images/matriculas1.jpg" alt="IdentificadorDeMatrículas">
-								<p class="portfoliop">
-									placeholder
+								<h2 class="cardTitle">Identificador de Matrículas</h2>
+								<p class="brief-text">
+									Un sistema dedicado a la identificación de matrículas en imágenes.
 								</p>
-								<p class="portfoliop">
+								<p class="alt-text" style="display: none;">
+									Este proyecto fue desarrollado para la asignatura Aprendizaje Automático. En él, nuestro equipo debía diseñar el funcionamiento de un sistema que emplease técnicas de aprendizaje automático dentro del marco del lenguaje Julia.
+									Para esto, nuestra primera aproximación fue explorar dos sistemas, una red de neuronas artificial (RNA) sencilla y una máquina de soporte vectorial (SVM). En esta sección analizamos los resultados obtenidos y las conclusiones que podemos extraer.
+									En las consecuentes aproximaciones refinamos el mecanismo de detectar cada matrícula teniendo en cuenta aspectos visuales, aparte de una tercera técnica, el agrupamiento en base a vecinos más cercanos.
+									En la última etapa comprobamos el uso de técnicas de aprendizaje profundo simples como el perceptrón multicapa y algo más complejas como CNNs.
+									De este trabajo aprendemos el mecanismo básico de desarrollo de sistemas inteligentes, tanto en el tratamiento de grandes colecciones de datos etiquetados como del diseño de las técnicas empleadas por el sistema.
+								</p>
+								<p class="tech">
 									Herramientas empleadas: Julia, Bash Script, LaTeX
 								</p>
-								<a href="files/matriculas.pdf" target="_blank" class="button primary">Abrir PDF</a>
+								<a href="files/matriculas.pdf" target="_blank" class="ver-pdf" style="display: none;">Abrir PDF</a>
+								<button class="boton-mas" onclick="expandirColumna(0)">Mostrar más</button>
 							</div>
-						</div>
-						<div class="topColumn">
-							<div class="outline">
-								<h3 class="cardTitle">Sistema Difuso de Control de Gasometrías Arteriales</h3>
+							<div class="columna">
 								<img class="cardImg" src="images/needle.jpg" alt="Gasometría">
-								<p class="portfoliop">
+								<h3 class="cardTitle">Sistema Difuso de Control de Gasometrías Arteriales</h3>
+								<p class="brief-text">
 									placeholder
 								</p>
-								<p class="portfoliop">
+								<p class="alt-text" style="display: none;">
+									Este proyecto fue desarrollado para la asignatura Aprendizaje Automático. En él, nuestro equipo debía diseñar el funcionamiento de un sistema que emplease técnicas de aprendizaje automático dentro del marco del lenguaje Julia.
+									Para esto, nuestra primera aproximación fue explorar dos sistemas, una red de neuronas artificial (RNA) sencilla y una máquina de soporte vectorial (SVM). En esta sección analizamos los resultados obtenidos y las conclusiones que podemos extraer.
+									En las consecuentes aproximaciones refinamos el mecanismo de detectar cada matrícula teniendo en cuenta aspectos visuales, aparte de una tercera técnica, el agrupamiento en base a vecinos más cercanos.
+									En la última etapa comprobamos el uso de técnicas de aprendizaje profundo simples como el perceptrón multicapa y algo más complejas como CNNs.
+									De este trabajo aprendemos el mecanismo básico de desarrollo de sistemas inteligentes, tanto en el tratamiento de grandes colecciones de datos etiquetados como del diseño de las técnicas empleadas por el sistema.
+								</p>
+								<p class="tech">
+									Herramientas empleadas: MATLAB, Bash Script, LaTeX
+								</p>
+								<a href="files/matriculas.pdf" target="_blank" class="ver-pdf" style="display: none;">Abrir PDF</a>
+								<button class="boton-mas" onclick="expandirColumna(1)">Mostrar más</button>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="container">
+							<div class="columna">
+								<img class="cardImg" src="images/matriculas1.jpg" alt="IdentificadorDeMatrículas">
+								<h2 class="cardTitle">Identificador de Matrículas</h2>
+								<a href="files/matriculas.pdf" target="_blank" class="ver-pdf" style="display: none;">Abrir PDF</a>
+								<p class="brief-text">
+									placeholder
+								</p>
+								<p class="tech">
+									Herramientas empleadas: Julia, Bash Script, LaTeX
+								</p>
+								<button class="boton-mas" onclick="expandirColumna(3)">Mostrar más</button>
+							</div>
+							<div class="columna">
+								<img class="cardImg" src="images/needle.jpg" alt="Gasometría">
+								<h3 class="cardTitle">Sistema Difuso de Control de Gasometrías Arteriales</h3>
+								<a href="files/rcra.pdf" target="_blank" class="ver-pdf" style="display: none;">Abrir PDF</a>
+								<p class="brief-text">
+									placeholder
+								</p>
+								<p class="tech">
 									Herramientas empleadas: MATLAB, LaTeX
 								</p>
-								<a href="files/rcra.pdf" target="_blank" class="button primary">Abrir PDF</a>
+								<button class="boton-mas" onclick="expandirColumna(4)">Mostrar más</button>
 							</div>
 						</div>
 					</div>
