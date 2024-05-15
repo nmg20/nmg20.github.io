@@ -1720,7 +1720,7 @@ input, select, textarea {
 .tech {
 	color: rgba(181, 177, 206, 0.637);
     margin-bottom: 10px; /* Ajustar el margen inferior del texto */
-	font-size: 2vw;
+	font-size: 1vw;
 }
 
 .alt-text{
@@ -1799,7 +1799,7 @@ input, select, textarea {
 .columna {
 	position: relative; /* Posición relativa para permitir el posicionamiento absoluto de la columna expandida */
 	flex: 1;
-    background-color: rgba(255, 255, 255, 0.24); /* Fondo blanco semitransparente */
+    /* background-color: rgba(255, 255, 255, 0.24); Fondo blanco semitransparente */
     margin: 0 10px; /* Margen horizontal entre columnas */
     padding: 20px; /* Espacio interno dentro de cada columna */
 	transition: flex 0.5s ease; /* Transición suave para el cambio de tamaño */
