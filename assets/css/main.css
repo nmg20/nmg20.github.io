@@ -1908,3 +1908,24 @@ input, select, textarea {
 	transform: scale(1.05);
 }
 
+#cv h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+/* Limitar ancho del contenido de cada sección */
+#cv section {
+    max-width: 800px; /* Ajusta a tu gusto: 700-800px suele funcionar bien */
+    margin: 0 auto;   /* Centra la sección horizontalmente */
+    padding: 0 20px;  /* Un poco de padding lateral para no pegar el texto al borde */
+}
+
+/* Línea separadora */
+.section-divider {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 2.5em auto; 
+    width: 80%; /* La línea es más corta que el ancho total, para elegancia */
+}
