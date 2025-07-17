@@ -1746,13 +1746,20 @@ input, select, textarea {
 
 /************** BOTÓN ***************/
 
+.button-group {
+  display: flex;
+  gap: 10px; /* Controla el espacio entre botones */
+  flex-wrap: wrap; /* Opcional: permite que los botones salten a la siguiente línea si no caben */
+  justify-content: center; /* Opcional: centra los botones horizontalmente */
+}
+
 .link-button {
-	background-color: rgba(179, 176, 176, 0.185); /* Color del botón */
-    border: none;
-	font-size: 20px;
-    display: block;
-    text-align: center; /* Centrar el texto */
-	transition: transform 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .link-button:hover {
@@ -1830,33 +1837,74 @@ input, select, textarea {
 
 /*************** IMÁGENES *******************/
 
-.columna .cardImg {
-	filter: grayscale(100%) blur(1px);
-    width: 100%; /* Establece el ancho máximo */
-    height: 150%; /* Altura automática para mantener la proporción */
-    max-height: 200px; /* Establece la altura máxima */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
-	transition: filter 0.3s ease; /* Añade una transición suave */
-	padding-bottom: 10px;
-	padding-top: 10px;
+.columna {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.columna:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.cardImg {
+  width: 250px;
+  height: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+/* Para pantallas pequeñas, que la imagen sea más estrecha y altura proporcional */
+@media screen and (max-width: 600px) {
+  .cardImg {
+    width: 100%;      /* que ocupe el ancho completo del contenedor */
+    height: auto;     /* para mantener proporción */
+  }
 }
 
 .columna .cardImg:hover{
 	filter: grayscale(0%) blur(0);
 }
 
+.intro-container {
+	display: flex;
+	flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+	gap: 2rem; /* Espacio entre imagen y texto */
+}
+
+.intro-image {
+	flex: 1 1 300px; /* Se adapta pero prioriza 300px mínimo */
+	max-width: 400px;
+}
+
+.intro-text {
+	flex: 2 1 500px;
+	text-align: justify;
+}
+
 .major .introPic {
-	width: 100%; /* Establece el ancho máximo */
-    height: auto; /* Altura automática para mantener la proporción */
-    max-width: 600px;
-	display: block;
-	transition: transform 0.6s ease; /* Añade una transición suave */
-	/* padding-left: 20px;*/
-	/* padding-right: 20px; */
-	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	border-radius: 1rem; /* Opcional: esquinas redondeadas */
+	transition: transform 0.6s ease;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .introPic:hover {
-    transform: scale(1.1); /* Expande la imagen al hacer hover */
+	transform: scale(1.05);
 }
 

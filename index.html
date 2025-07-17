@@ -54,18 +54,41 @@
 			<!-- Intro -->
 			<article id="intro">
 				<h1 class="major">Intro</h1>
-				<img class="introPic" src="images/pfp.png">
-				<text class="aboutMe">
-					<h3>Hola, me llamo Nicolás</h3>
-					<p>
-					Acabo de graduarme recientemente en ingeniería informática y estoy buscando incorporarme
-					 al mundo laboral. Tengo experiencia como desarrollador desoftware, especializándome en 
-					 el diseño eimplementación de sistemas inteligentes. He realizado mi trabajo de fin de 
-					 grado sobre el estudio del uso de redes convolucionales para aplicaciones agrónomas en
-					 el que he aprendido mucho sobre cómo funcionan estos sistemas. Aparte, me apasionan el 
-					 diseño 3D y devideojuegos y la producción y mezcla musical.
-					</p>
-				</text>
+				<div class="intro-container">
+					<img class="introPic" src="images/pfp.jpg">
+					<text class="aboutMe">
+						<h3>Hola, me llamo Nicolás Martínez.</h3>
+						<p>
+							Soy un desarrollador software especializado en el backend además de áreas de la 
+							inteligencia artificial como la visión por computador.
+						</p>
+						<p>
+							Terminé el año pasado el Grado en Ingeniería Informática en la Universidad de A Coruña, 
+							en la mención de Computación. Durante la carrera amplié mis conocimientos en el desarrollo 
+							de software, aprendiendo a aplicar conceptos fundamentales como patrones de diseño, 
+							experiencia de usuario, pruebas automatizadas y el uso de servicios RESTful.
+						</p>
+						
+						
+						<p>
+							Además, realicé mi trabajo de fin de grado centrado en el estudio y aplicación de redes convolucionales 
+							para soluciones de visión artificial en el ámbito agronómico, lo que me permitió profundizar en técnicas 
+							de inteligencia artificial y procesamiento de imágenes.
+						</p>
+
+						<p>
+							El último año he trabajado como programador backend junior en N3TEAM EUROPE SL, llevando a cabo tareas
+							de desarrollo web usando Java 17, Spring Boot, MySQL entre otros. Durante este periodo aprendí a trabajar
+							en equipo en un entorno real teniendo que completar tareas a tiempo, resolver requisitos con el cliente 
+							y aplicar la metodología SCRUM. 
+						</p>
+
+						<p>
+							En mi tiempo libre me gusta llevar a cabo pequeños proyectos con los que familiarizarme con nuevas herramientas o frameworks,
+							como desarrollar un lenguaje de programación, una aplicación de predicción meteorológica o videojuegos.
+						</p>
+					</text>
+				</div>
 			</article>
 
 			<!-- Portfolio -->
@@ -73,112 +96,153 @@
 				<!-- <h1 class="major">Proyectos</h1> -->
 				<!-- <br> -->
 				<h2 class="major rHeader">Proyectos teóricos</h2>
-				<container>
-					<div class="row">
-						<div class="container">
-							<div class="columna">
-								<img class="cardImg" src="images/tomato.jpg" alt="TFG">
-								<h3 class="cardTitle">Trabajo de Fin de Grado</h3>
-								<p class="brief-text">
-									Un estudio del ajuste adaptativo en la detección de tomates en secuencias de vídeo.
-								</p>
-								<!-- <p class="alt-text" style="display: none;">
-									Lorem ipsum
-								</p> -->
-								<p class="tech">
-									Herramientas: Python, PyTorch, OpenCV, NumPy, Lightning, Neptune.ai, Albumentations
-								</p>
-								<!-- <a href="files/tfg.pdf" target="_blank" class="link-button">Abrir PDF</a> -->
-								<a href="https://github.com/nmg20/tfg_tomates" target="_blank" class="link-button">Ver Código</a>
-								<!-- <a href="files/tfg.pdf" target="_blank" class="link-button" style="display: none;">Abrir PDF</a>
-								<a href="https://github.com/nmg20/tfg_tomates" target="_blank" class="link-button" style="display: none;">Ver Código</a>
-								<button class="boton-mas" onclick="expandirColumna(this)">Mostrar más</button> -->
-							</div>
-							<div class="columna">
-								<img class="cardImg" src="images/matriculas1.jpg" alt="IdentificadorDeMatrículas">
-								<h3 class="cardTitle">Identificador de Matrículas</h3>
-								<p class="brief-text">
-									Un sistema dedicado a la identificación de matrículas en imágenes.
-								</p>
-								<!-- <p class="alt-text" style="display: none;">
-									Este proyecto fue desarrollado para la asignatura Aprendizaje Automático. En él, nuestro equipo debía diseñar el funcionamiento de un sistema que emplease técnicas de aprendizaje automático dentro del marco del lenguaje Julia.
-									Para esto, nuestra primera aproximación fue explorar dos sistemas, una red de neuronas artificial (RNA) sencilla y una máquina de soporte vectorial (SVM). En esta sección analizamos los resultados obtenidos y las conclusiones que podemos extraer.
-									En las consecuentes aproximaciones refinamos el mecanismo de detectar cada matrícula teniendo en cuenta aspectos visuales, aparte de una tercera técnica, el agrupamiento en base a vecinos más cercanos.
-									En la última etapa comprobamos el uso de técnicas de aprendizaje profundo simples como el perceptrón multicapa y algo más complejas como CNNs.
-									De este trabajo aprendemos el mecanismo básico de desarrollo de sistemas inteligentes, tanto en el tratamiento de grandes colecciones de datos etiquetados como del diseño de las técnicas empleadas por el sistema.
-								</p> -->
-								<p class="tech">
-									Herramientas: Julia, Bash Script, LaTeX
-								</p>
-								<a href="files/matriculas.pdf" target="_blank" class="link-button">Abrir PDF</a>
-								<!-- <a href="files/matriculas.pdf" target="_blank" class="link-button" style="display: none;">Abrir PDF</a>
-								<button class="boton-mas" onclick="expandirColumna(this)">Mostrar más</button> -->
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="container">
-							<div class="columna">
-								<img class="cardImg" src="images/needle.jpg" alt="Gasometría">
-								<h3 class="cardTitle">Sistema Difuso de control de gasometrías arteriales</h3>
-								<p class="brief-text">
-									Aplicación de lógica difusa para la interpretación de gasometrías arteriales.
-								</p>
-								<p class="tech">
-									Herramientas: MATLAB, Bash Script, LaTeX
-								</p>
-								<a href="files/rcra.pdf" target="_blank" class="link-button">Abrir PDF</a>
-								<!-- <button class="boton-mas" onclick="expandirColumna(this)">Mostrar más</button> -->
-							</div>
-							<div class="columna">
+				<div class="container">
+					<container>
+						<div class="row">
+							<div class="container">
+								<div class="columna">
+									<img class="cardImg" src="images/tomato.jpg" alt="TFG">
+									<h3 class="cardTitle">Trabajo de Fin de Grado</h3>
+									<p class="brief-text">
+										Un estudio del ajuste adaptativo en la detección de tomates en secuencias de vídeo. Este proyecto me ayudó a solidificar mis conocimientos en el desarrollo de 
+										sistemas de aprendizaje automático y visión artificial, así como de la metodología CI/CD para producir prototipos y probarlos de forma eficiente.
+									</p>
+									<!-- <p class="alt-text" style="display: none;">
+										Lorem ipsum
+									</p> -->
+									<p class="tech">
+										Herramientas: Python, PyTorch, OpenCV, NumPy, Lightning, Neptune.ai, Albumentations
+									</p>
+									<div class="button-group">
+										<a href="https://github.com/nmg20/tfg_tomates" target="_blank" class="link-button">Ver Código</a>
+										<a href="files/tfg.pdf" target="_blank" class="link-button">Abrir PDF</a>
+									</div>
+									<!-- <a href="files/tfg.pdf" target="_blank" class="link-button" style="display: none;">Abrir PDF</a>
+									<a href="https://github.com/nmg20/tfg_tomates" target="_blank" class="link-button" style="display: none;">Ver Código</a>
+									<button class="boton-mas" onclick="expandirColumna(this)">Mostrar más</button> -->
+								</div>
+								<div class="columna">
+									<img class="cardImg" src="images/matriculas1.jpg" alt="IdentificadorDeMatrículas">
+									<h3 class="cardTitle">Identificador de Matrículas</h3>
+									<p class="brief-text">
+										Un sistema dedicado a la identificación de matrículas en imágenes. Con este proyecto aprendí a trabajar con sistemas inteligentes y cómo organizar el procesamiento de la información para estos.
+									</p>
+									<!-- <p class="alt-text" style="display: none;">
+										Este proyecto fue desarrollado para la asignatura Aprendizaje Automático. En él, nuestro equipo debía diseñar el funcionamiento de un sistema que emplease técnicas de aprendizaje automático dentro del marco del lenguaje Julia.
+										Para esto, nuestra primera aproximación fue explorar dos sistemas, una red de neuronas artificial (RNA) sencilla y una máquina de soporte vectorial (SVM). En esta sección analizamos los resultados obtenidos y las conclusiones que podemos extraer.
+										En las consecuentes aproximaciones refinamos el mecanismo de detectar cada matrícula teniendo en cuenta aspectos visuales, aparte de una tercera técnica, el agrupamiento en base a vecinos más cercanos.
+										En la última etapa comprobamos el uso de técnicas de aprendizaje profundo simples como el perceptrón multicapa y algo más complejas como CNNs.
+										De este trabajo aprendemos el mecanismo básico de desarrollo de sistemas inteligentes, tanto en el tratamiento de grandes colecciones de datos etiquetados como del diseño de las técnicas empleadas por el sistema.
+									</p> -->
+									<p class="tech">
+										Herramientas: Julia, Bash Script, LaTeX
+									</p>
+									<a href="files/matriculas.pdf" target="_blank" class="link-button">Abrir PDF</a>
+									<!-- <a href="files/matriculas.pdf" target="_blank" class="link-button" style="display: none;">Abrir PDF</a>
+									<button class="boton-mas" onclick="expandirColumna(this)">Mostrar más</button> -->
+								</div>
 							</div>
 						</div>
-					</div>
-				</container>
+						<div class="row">
+							<div class="container">
+								<div class="columna">
+									<img class="cardImg" src="images/needle.jpg" alt="Gasometría">
+									<h3 class="cardTitle">Sistema Difuso de control de gasometrías arteriales</h3>
+									<p class="brief-text">
+										Aplicación de lógica difusa para la interpretación de gasometrías arteriales. Aprendí a usar técnicas de aprendizaje automático no tan vistosas como la lógica difusa.
+									</p>
+									<p class="tech">
+										Herramientas: MATLAB, Bash Script, LaTeX
+									</p>
+									<a href="files/rcra.pdf" target="_blank" class="link-button">Abrir PDF</a>
+									<!-- <button class="boton-mas" onclick="expandirColumna(this)">Mostrar más</button> -->
+								</div>
+								<div class="columna">
+								</div>
+							</div>
+						</div>
+					</container>
+				</div>
 				<br>
-				<h2 class="major rHeader">Proyectos de desarrollo</h2>
-				<container>
-					<div class="row">
-						<div class="container">
-							<div class="columna">
-								<img class="cardImg" src="images/prog.jpg" alt="BuscadorDeDocumentos">
-								<h3 class="cardTitle">Buscador de documentos</h3>
-								<p class="brief-text">
-									Un conjunto de funciones para recuperar información y compararla empleando la librería Lucene.
-								</p>
-								<!-- <p class="alt-text" style="display: none;">
-									Lorem ipsum
-								</p> -->
-								<p class="tech">
-									Herramientas: Java, Lucene, Luke
-								</p>
-								<a href="https://github.com/nmg20/mri-searcher-archive" target="_blank" class="link-button">Ver Código</a>
-								<!-- <a href="https://github.com/nmg20/mri-searcher-archive" target="_blank" class="link-button" style="display: none;">Ver Código</a> -->
-								<!-- <button class="boton-mas" onclick="expandirColumna(this)">Mostrar más</button> -->
-							</div>
-							<div class="columna">
-								<img class="cardImg" src="images/server.jpg" alt="Servidor">
-								<h3 class="cardTitle">Servidor de Atletismo</h3>
-								<p class="brief-text">
-									Servidor de carreras con varias implementaciones como API Rest o Apache Thrift
-								</p>
-								<!-- <p class="alt-text" style="display: none;">
-									Este proyecto fue desarrollado para la asignatura Aprendizaje Automático. En él, nuestro equipo debía diseñar el funcionamiento de un sistema que emplease técnicas de aprendizaje automático dentro del marco del lenguaje Julia.
-									Para esto, nuestra primera aproximación fue explorar dos sistemas, una red de neuronas artificial (RNA) sencilla y una máquina de soporte vectorial (SVM). En esta sección analizamos los resultados obtenidos y las conclusiones que podemos extraer.
-									En las consecuentes aproximaciones refinamos el mecanismo de detectar cada matrícula teniendo en cuenta aspectos visuales, aparte de una tercera técnica, el agrupamiento en base a vecinos más cercanos.
-									En la última etapa comprobamos el uso de técnicas de aprendizaje profundo simples como el perceptrón multicapa y algo más complejas como CNNs.
-									De este trabajo aprendemos el mecanismo básico de desarrollo de sistemas inteligentes, tanto en el tratamiento de grandes colecciones de datos etiquetados como del diseño de las técnicas empleadas por el sistema.
-								</p> -->
-								<p class="tech">
-									Herramientas: Java 11, SQL
-								</p>
-								<!-- <a href="files/matriculas.pdf" target="_blank" class="link-button" style="display: none;">Abrir PDF</a> -->
-								<a href="https://github.com/nmg20/udc-fic-isd-repos-2122-archive" target="_blank" class="link-button">Ver Código</a>
-								<!-- <button class="boton-mas" onclick="expandirColumna(this)">Mostrar más</button> -->
+				<h2 class="major rHeader">Proyectos Prácticos</h2>
+				<div class="container">
+					<container>
+						<div class="row">
+							<div class="container">
+								<div class="columna">
+									<img class="cardImg" src="images/prog.jpg" alt="BuscadorDeDocumentos">
+									<h3 class="cardTitle">Buscador de documentos</h3>
+									<p class="brief-text">
+										Un conjunto de funciones para recuperar información y compararla empleando la librería Lucene. Con este proyecto aprendí técnicas de búsqueda y comparación de documentos basándome en información tanto léxica como semántica.
+									</p>
+									<!-- <p class="alt-text" style="display: none;">
+										Lorem ipsum
+									</p> -->
+									<p class="tech">
+										Herramientas: Java, Lucene, Luke
+									</p>
+									<a href="https://github.com/nmg20/mri-searcher-archive" target="_blank" class="link-button">Ver Código</a>
+									<!-- <a href="https://github.com/nmg20/mri-searcher-archive" target="_blank" class="link-button" style="display: none;">Ver Código</a> -->
+									<!-- <button class="boton-mas" onclick="expandirColumna(this)">Mostrar más</button> -->
+								</div>
+								<div class="columna">
+									<img class="cardImg" src="images/server.jpg" alt="Servidor">
+									<h3 class="cardTitle">Servidor de Atletismo</h3>
+									<p class="brief-text">
+										Servidor de carreras con varias implementaciones como API Rest y Apache Thrift. Esto reforzó mis conocimientos en el desarrollo de servicios RESTful.
+									</p>
+									<!-- <p class="alt-text" style="display: none;">
+										Este proyecto fue desarrollado para la asignatura Aprendizaje Automático. En él, nuestro equipo debía diseñar el funcionamiento de un sistema que emplease técnicas de aprendizaje automático dentro del marco del lenguaje Julia.
+										Para esto, nuestra primera aproximación fue explorar dos sistemas, una red de neuronas artificial (RNA) sencilla y una máquina de soporte vectorial (SVM). En esta sección analizamos los resultados obtenidos y las conclusiones que podemos extraer.
+										En las consecuentes aproximaciones refinamos el mecanismo de detectar cada matrícula teniendo en cuenta aspectos visuales, aparte de una tercera técnica, el agrupamiento en base a vecinos más cercanos.
+										En la última etapa comprobamos el uso de técnicas de aprendizaje profundo simples como el perceptrón multicapa y algo más complejas como CNNs.
+										De este trabajo aprendemos el mecanismo básico de desarrollo de sistemas inteligentes, tanto en el tratamiento de grandes colecciones de datos etiquetados como del diseño de las técnicas empleadas por el sistema.
+									</p> -->
+									<p class="tech">
+										Herramientas: Java 11, SQL
+									</p>
+									<!-- <a href="files/matriculas.pdf" target="_blank" class="link-button" style="display: none;">Abrir PDF</a> -->
+									<a href="https://github.com/nmg20/udc-fic-isd-repos-2122-archive" target="_blank" class="link-button">Ver Código</a>
+									<!-- <button class="boton-mas" onclick="expandirColumna(this)">Mostrar más</button> -->
+								</div>
 							</div>
 						</div>
-					</div>
-				</container>
+					</container>
+				</div>
+				<h2 class="major rHeader">Proyectos En Desarrollo</h2>
+				<div class="container">
+					<container>
+						<div class="row">
+							<div class="container">
+								<div class="columna">
+									<img class="cardImg" src="images/forecast.jpg" alt="BuscadorDeDocumentos">
+									<h3 class="cardTitle">Servicio de predicción meteorológica basado en Web Scraping</h3>
+									<p class="brief-text">
+										Sistema basado en scrapear webs de registro y predicción meteorológica para confeccionar predicciones propias usando distintos métodos de aprendizaje automático.
+										Con este proyecto busco ampliar mi experiencia en el manejo de grandes volúmenes de datos, así como en el desarrollo de sistemas inteligentes para procesos síncronos.
+									</p>
+									<p class="tech">
+										Herramientas: Python, FastAPI, TensorFlow, NumPy
+									</p>
+									<a href="https://github.com/nmg20/forecast" target="_blank" class="link-button">Ver Código</a>
+								</div>
+								<div class="columna">
+									<img class="cardImg" src="images/prog2.jpg" alt="BuscadorDeDocumentos">
+									<h3 class="cardTitle">Quol - Lenguaje de Programación</h3>
+									<p class="brief-text">
+										Lenguaje de programación creado desde cero siguiendo el ejemplo del libro <a href="https://craftinginterpreters.com/">Crafting Interpreters</a>.
+										Con este proyecto quiero retomar técnicas en el análisis de lenguajes de programación, cómo optimizarlos y finalmente cómo desarrollar uno propio. 
+									</p>
+									<p class="tech">
+										Herramientas: Java, C
+									</p>
+									<a href="https://github.com/nmg20/quol-lang" target="_blank" class="link-button">Ver Código</a>
+								</div>
+								
+							</div>
+						</div>
+					</container>
+				</div>
 			</article>
 
 			<!-- Resume -->
